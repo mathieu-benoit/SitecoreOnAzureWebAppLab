@@ -10,4 +10,9 @@ Backlog of improvements for future updates:
 https://kb.sitecore.net/articles/848330
 - Update doc with "Publishing Service: high availability": https://kb.sitecore.net/articles/993639
 - Add a new section Azure Price estimation with the Azure Pricing Calculator Tool
-- 
+- Update IP restriction section?
+ - From the Azure portal: https://blogs.msdn.microsoft.com/appserviceteam/2017/09/13/august-2017-app-service-update/
+ - From ARM Templates: https://github.com/shanepeckham/CADLab_Loyalty_Security#ip-restricting-the-app-service-api-app-to-be-callable-only-from-api-management
+- Add a new Azure Search Traffic Analytics + PowerBI
+https://docs.microsoft.com/en-us/azure/search/search-traffic-analytics
+- ...
