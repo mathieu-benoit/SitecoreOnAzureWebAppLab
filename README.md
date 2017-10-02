@@ -2,14 +2,14 @@
 
 ## Table of content
 
-1. [Setup](./1 - Setup/README.md)
-2. [ARM Templates](./2 - ARM Templates/README.md)
-3. [SQL Database](./3 - SQL Database/README.md)
-4. [App Service and Web App](./4 - App Service and Web App/README.md)
-5. [Azure Search](./5 - Search/README.md)
-6. [Application Insights](./6 - Application Insights/README.md)
-7. [QnA Maker and Bot Service](./7 - QnA Maker and Bot Service/README.md)
-8. [DevOps with VSTS](./8 - DevOps with VSTS/README.md)
+1. [Setup](1%20-%20Setup/README.md)
+2. [ARM Templates](2%20-%20ARM%20Templates/README.md)
+3. [SQL Database](3%20-%20SQL%20Database/README.md)
+4. [App Service and Web App](4%20-%20App%20Service%20and%20Web%20App/README.md)
+5. [Azure Search](5%20-%20Search/README.md)
+6. [Application Insights](6%20-%20Application%20Insights/README.md)
+7. [QnA Maker and Bot Service](7%20-%20QnA%20Maker%20and%20Bot%20Service/README.md)
+8. [DevOps with VSTS](8%20-%20DevOps%20with%20VSTS/README.md)
 
 ## Revision History
 
