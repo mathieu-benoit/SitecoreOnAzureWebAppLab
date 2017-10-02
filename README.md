@@ -2,29 +2,29 @@
 
 ## Table of content
 
-1. [Setup](1%20-%20Setup/README.md)
-2. [ARM Templates](2%20-%20ARM%20Templates/README.md)
-3. [SQL Database](3%20-%20SQL%20Database/README.md)
-4. [App Service and Web App](4%20-%20App%20Service%20and%20Web%20App/README.md)
-5. [Azure Search](5%20-%20Search/README.md)
-6. [Application Insights](6%20-%20Application%20Insights/README.md)
-7. [QnA Maker and Bot Service](7%20-%20QnA%20Maker%20and%20Bot%20Service/README.md)
+1. [Setup (30min)](1%20-%20Setup/README.md)
+2. [ARM Templates (90min)](2%20-%20ARM%20Templates/README.md)
+3. [SQL Database (20min)](3%20-%20SQL%20Database/README.md)
+4. [App Service and Web App (60 min)](4%20-%20App%20Service%20and%20Web%20App/README.md)
+5. [Azure Search (15min)](5%20-%20Search/README.md)
+6. [Application Insights (20min)](6%20-%20Application%20Insights/README.md)
+7. [QnA Maker and Bot Service (20 min)](7%20-%20QnA%20Maker%20and%20Bot%20Service/README.md)
 8. [DevOps with VSTS](8%20-%20DevOps%20with%20VSTS/README.md)
 
 ## Revision History
 
 - 2017-06-21
- - Update the SQL Database Georeplication setup according the new transparent geographic failover of database groups feature.
+  - Update the SQL Database Georeplication setup according the new transparent geographic failover of database groups feature.
 - 2017-06-08
- - Update references to Sitecore Publishing Service 2.0.1 (which fixes installation issue)
- - Update references to Sitecore 8.2 update 3 (rev. 170407) – ARM Templates, etc.
- - Add IP restriction feature on Azure Web Apps
+  - Update references to Sitecore Publishing Service 2.0.1 (which fixes installation issue)
+  - Update references to Sitecore 8.2 update 3 (rev. 170407) – ARM Templates, etc.
+  - Add IP restriction feature on Azure Web Apps
 - 2017-05-11
- - Use Visual Studio 2017 Community to 15.2 through Azure DevTest Lab
- - Leverage the new Azure Cloud Shell instead of doing that through the Azure portal UI to configure the Azure KeyVault
- - Add a new entry “Annotations on metric charts” with Application Insights
+  - Use Visual Studio 2017 Community to 15.2 through Azure DevTest Lab
+  - Leverage the new Azure Cloud Shell instead of doing that through the Azure portal UI to configure the Azure KeyVault
+  - Add a new entry “Annotations on metric charts” with Application Insights
 - 2017-04-07 
- - Initial version
+  - Initial version
 
 ## Introduction
 
@@ -54,8 +54,8 @@ https://kb.sitecore.net/articles/848330
 - Update doc with "Publishing Service: high availability": https://kb.sitecore.net/articles/993639
 - Add a new section Azure Price estimation with the Azure Pricing Calculator Tool
 - Update IP restriction section
- - From the Azure portal: https://blogs.msdn.microsoft.com/appserviceteam/2017/09/13/august-2017-app-service-update/
- - From ARM Templates: https://github.com/shanepeckham/CADLab_Loyalty_Security#ip-restricting-the-app-service-api-app-to-be-callable-only-from-api-management
+  - From the Azure portal: https://blogs.msdn.microsoft.com/appserviceteam/2017/09/13/august-2017-app-service-update/
+  - From ARM Templates: https://github.com/shanepeckham/CADLab_Loyalty_Security#ip-restricting-the-app-service-api-app-to-be-callable-only-from-api-management
 - Add a new Azure Search Traffic Analytics + PowerBI
 https://docs.microsoft.com/en-us/azure/search/search-traffic-analytics
 - Add TDS or Unicorn
