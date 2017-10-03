@@ -11,7 +11,7 @@ During all this lab, we will use the Sitecore xM4 configuration: the CM and the 
 
 This diagram below represents how you will organize your different services through this lab. The Azure Resource Groups are an important piece to understand and grouping your different resources in different resource groups is a good practice.
 
-![Resource Groups Overview](./imgs/resource%20groups%20overview.png)
+![Resource Groups Overview](./imgs/resource%20groups%20overview.PNG)
 
 - CloudShell_RG
   - This resource group will contain the associated Azure Cloud Shell's storage. It will be provisioned during the [Setup lab](../Setup/README.md).
