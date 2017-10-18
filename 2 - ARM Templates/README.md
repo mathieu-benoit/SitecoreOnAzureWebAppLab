@@ -36,12 +36,12 @@ Note: the storage account name should be globally unique.
 4. Open locally the Microsoft Azure Storage Explorer tool and navigate to your `sitecorelabassets` Storage account
 5. Right click on "Blob Containers" and choose "Create Blob Container" like illustrated below:
 
-![Create Blob Container](./imgs/create%20blob%20container.png)
+![Create Blob Container](./imgs/create%20blob%20container.PNG)
 
 5. Once unzipped locally, upload the two associated files of the Sitecore XM package zip file (8.2.5 - 170728) in the `sitecore-assets` container
 6. Upload the Sitecore license.xml file as well in the `sitecore-assets` container
 
-![Sitecore Assets uploaded](./imgs/sitecore%20assets%20uploaded.png)
+![Sitecore Assets uploaded](./imgs/sitecore%20assets%20uploaded.PNG)
 
 ## Task 2: Deploy the default Sitecore XM ARM Templates (45 min)
 
