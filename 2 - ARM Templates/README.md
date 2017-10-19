@@ -6,8 +6,6 @@ TODO
 ## Prerequisities
 
 - Make sure you went through the previous "[1 - Setup](../1%20-%20Setup/README.md)" lab.
-- Make sure you have your Sitecore XM package zip file (8.2.5 - 170728). Otherwise ask your Sitecore partner or rep.
-- Make sure you have your Sitecore license.xml file. Otherwise ask your Sitecore partner or rep.
 
 ## Objectives
 
@@ -19,39 +17,15 @@ Throughout this exercise, you will use:
 - Microsoft Azure Storage Explorer
 - Visual Studio Code
 
-## Task 1: Prepare the files (15 min)
-
-In this section, the attendee will prepare all the files needed for the deployment of the Sitecore ARM Templates and will drop them in a dedicated Azure Blob Storage.
-
-1. Go to the Azure portal [https://portal.azure.com](https://portal.azure.com)
-2. Open the Azure Cloud Shell for Bash (quickstart available [here](https://docs.microsoft.com/en-us/azure/cloud-shell/quickstart))
-3. In this console type these successive commands:
-- ```az account list --output table``` - to list your Azure subscriptions
-- ```az account set --subscription Your-Subscription``` - to select `Your-Subscription` subscription you would like to use for this lab
-- ```az group list --output table``` - to list all the resource groups you have under the subscription `Your-Subscription`
-- ```az group create -l eastus -n Sitecore_Lab-Assets``` - to create a new `Sitecore_Lab-Assets` resource group
-- ```az resource list -g Sitecore_Lab-Assets --output table``` - to list all the resources you have under the resource group `Sitecore_Lab-Assets` (should be empty for now)
-- ```az storage account create -n sitecorelabassets -g Sitecore_Lab-Assets -l eastus --sku Standard_LRS``` - to create a new `sitecorelabassets` storage account in the EastUS datacenter
-Note: the storage account name should be globally unique.
-4. Open locally the Microsoft Azure Storage Explorer tool and navigate to your `sitecorelabassets` Storage account
-5. Right click on "Blob Containers" and choose "Create Blob Container" like illustrated below:
-
-![Create Blob Container](./imgs/create%20blob%20container.PNG)
-
-5. Once unzipped locally, upload the two associated files of the Sitecore XM package zip file (8.2.5 - 170728) in the `sitecore-assets` container
-6. Upload the Sitecore license.xml file as well in the `sitecore-assets` container
-
-![Sitecore Assets uploaded](./imgs/sitecore%20assets%20uploaded.PNG)
-
-## Task 2: Deploy the default Sitecore XM ARM Templates (45 min)
+## Task 1: Deploy the default Sitecore XM ARM Templates (45 min)
 
 TODO
 
-## Task 3: Configure an Azure KeyVault to store secrets (10 min)
+## Task 2: Configure an Azure KeyVault to store secrets (10 min)
 
 TODO
 
-## Task 4: Deploy a custom Sitecore XM ARM Templates (15 min)
+## Task 3: Deploy a custom Sitecore XM ARM Templates (15 min)
 
 TODO
 
