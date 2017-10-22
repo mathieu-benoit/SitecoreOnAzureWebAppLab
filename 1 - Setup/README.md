@@ -67,11 +67,13 @@ az storage account create -n sitecorelabassets<yourname> -g Sitecore_Lab-Assets 
 
 ![Create Blob Container](./imgs/create%20blob%20container.PNG)
 
-5. Once unzipped locally, upload the two associated files of the Sitecore XM Scaled package zip file (9.0.0 - 171002) in the `sitecoreassets` container
-6. Upload the Sitecore license.xml file as well in the `sitecoreassets` container
-TODO - review here - cd C:\users\ContainerAdministrator\CloudDrive instead
+6. Once unzipped locally, upload the two associated files of the Sitecore XM Scaled package zip file (9.0.0 - 171002) in the `sitecoreassets` container
 
 ![Sitecore Assets uploaded](./imgs/sitecore%20assets%20uploaded.PNG)
+
+7. Now we will upload the Sitecore license.xml file and the [DeployDefaultARMTemplates.ps1](./DeployDefaultARMTemplates.ps1) in the local storage of the Azure Cloud Shell to be able in the next lab to run the deployment. For that just drop them in the associated Storage account (it should start by "cs...") in the associated File Shares (it should start by "cs-...") like illustrated below:
+
+![Script and License uploaded](./imgs/script%20license%20uploaded.PNG)
 
 ## Resources
 

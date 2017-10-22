@@ -45,24 +45,30 @@ cd ResourceGroups/sitecorelab<yourname>
 #to deploy all the Azure services defined by the Sitecore ARM Templates
 C:\users\ContainerAdministrator\CloudDrive\DeployDefaultARMTemplates.ps1 -LicenseFile "C:\users\ContainerAdministrator\CloudDrive\license.xml"
 #and supply the following values when prompted:
-ResourceGroupName: sitecorelab<yourname>
-AssetsBlobStorageAccountName: sitecorelabassets<yourname>
-SqlServerPassword demo@pass12345
+#ResourceGroupName: sitecorelab<yourname>
+#AssetsBlobStorageAccountName: sitecorelabassets<yourname>
+#SqlServerPassword: demo@pass12345
 ```
 
-4. Then all the resources defined within the associated ARM Templates will be deployed like illustrated below. It will take about 30 min. You could see as well 4 deployments entries in the "Deployments" blade of the resource group.
+4. Then all the resources defined within the associated ARM Templates will be deployed like illustrated below. It will take about 30 min. When it will end you will be able to see the 4 deployments entries in the "Deployments" blade of the resource group.
 
-![Resource group deployments](./imgs/resource%20group%20deployment.PNG)
+![Resource group deployments](./imgs/resource%20group%20deployments.PNG)
 
 ![Azure resources created](./imgs/azure%20resources%20created.PNG)
 
-## Task 2: Configure an Azure KeyVault to store secrets (10 min)
+## Task 2: Read and interpret the PowerShell script and the Sitecore ARM Template (10 min)
 
-TODO
+1. You could open the [DeployDefaultARMTemplates.ps1](../1 - Setup/DeployDefaultARMTemplates.ps1) script and see/learn what is in here.
 
-## Task 3: Deploy a custom Sitecore XM ARM Templates (15 min)
+2. You could open the [Sitecore XM Environment](https://github.com/Sitecore/Sitecore-Azure-Quickstart-Templates/tree/master/Sitecore%209.0.0/XM) we deployed with this script.
 
-TODO
+## Task 3: Configure an Azure KeyVault to store secrets (10 min)
+
+See corresponding section in the step-by-step document [here](../Sitecore%20on%20Azure%20PaaS%20services%20-%20Hands-on%20Lab.pdf).
+
+## Task 4: Deploy a custom Sitecore XM ARM Templates (15 min)
+
+See corresponding section in the step-by-step document [here](../Sitecore%20on%20Azure%20PaaS%20services%20-%20Hands-on%20Lab.pdf).
 
 ## Resources
 
