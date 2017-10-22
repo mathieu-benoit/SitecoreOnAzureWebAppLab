@@ -3,7 +3,7 @@
 ## Objectives
 
 The overall goal of this lab is to deploy and adapt the [default and official Sitecore ARM Templates](https://github.com/Sitecore/Sitecore-Azure-Quickstart-Templates) to be able to leverage the associated Microsoft Azure infrastructure and play with the different features of the Azure services provisionned. At the end of the day, make you more familiar with Microsoft Azure and the Azure services needed for your Sitecore solutions.
-During all this lab, we will use the Sitecore xM4 configuration: the CM and the CD are split, and we are not managing any MongoDB databases, so no Sitecore Analytics. The Azure Solution Architecture associated is:
+During all this lab, we will use the Sitecore xM4/Large configuration: the CM and the CD are split, and we are not managing any MongoDB databases, so no Sitecore Analytics. The Azure Solution Architecture associated is:
 
 ![Sitecore xM Architecture Diagram](./imgs/sitecore%20xm%20architecture%20diagram.png)
 
@@ -48,7 +48,7 @@ The estimations below of the Azure services cost are here as an exercise for you
     - [Azure Search](https://azure.microsoft.com/pricing/details/search/)
     - [Azure Application Insights](https://azure.microsoft.com/pricing/details/application-insights/)
     - [Azure Redis Cache](https://azure.microsoft.com/pricing/details/cache/)
-  - Estimation for the purpose of this lab (Sitecore xM4 topology):
+  - Estimation for the purpose of this lab (Sitecore xM4/Large topology):
     - 2 Azure App Service (1 B2 + 1 S3) : 409.20$US/month
     - 3 Azure SQL Databases (2 S1 + 1 S2): 135.03$US/month
     - 1 Azure Search (1 S1): 249.99$US/month
@@ -64,7 +64,7 @@ The estimations below of the Azure services cost are here as an exercise for you
     - [Visual Studio Team Services](https://azure.microsoft.com/pricing/details/visual-studio-team-services/)
   - Estimation for the purpose of this lab: 0$US/month
 
-## Associated resources
+## Resources
 
 - [Microsoft Azure, Cloud and Enterprise Symbol / Icon Set](https://www.microsoft.com/download/details.aspx?id=41937)
 - [Azure enterprise scaffold - prescriptive subscription governance](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-manager-subscription-governance)
@@ -73,9 +73,9 @@ The estimations below of the Azure services cost are here as an exercise for you
 - [Sitecore Cloud - Status Page](https://status.cloud.sitecore.net/)
 - [Sitecore on Microsoft Azure – Module compatibility](https://kb.sitecore.net/articles/201557)
 
-## What have you learned?
+## What have you seen?
 
 - The importance of the location of your Azure services within your Azure subscriptions and your Azure resource groups
 - Sitecore provides some guidance regarding templates, topologies, tiers, data center compatibility, etc. you could leverage
 - You could estimate your Azure services costs by using the Azure Pricing Calculator based on the each Azure services criteria exposed on their pricing details page
-- Beautiful icons and symbols exist to build your own Azure architecture diagrams ;)
+- Beautiful icons and symbols are available to build your own Azure architecture diagrams ;)

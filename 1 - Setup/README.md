@@ -41,24 +41,44 @@ In this section, the attendee will prepare all the files needed for the deployme
 1. Go to the Azure portal [https://portal.azure.com](https://portal.azure.com)
 2. Open the Azure Cloud Shell for Bash (quickstart available [here](https://docs.microsoft.com/en-us/azure/cloud-shell/quickstart))
 3. In this console type these successive commands:
-- ```az account list --output table``` - to list your Azure subscriptions
-- ```az account set --subscription Your-Subscription``` - to select `Your-Subscription` subscription you would like to use for this lab
-- ```az group list --output table``` - to list all the resource groups you have under the subscription `Your-Subscription`
-- ```az group create -l eastus -n Sitecore_Lab-Assets``` - to create a new `Sitecore_Lab-Assets` resource group
-- ```az resource list -g Sitecore_Lab-Assets --output table``` - to list all the resources you have under the resource group `Sitecore_Lab-Assets` (should be empty for now)
-- ```az storage account create -n sitecorelabassets -g Sitecore_Lab-Assets -l eastus --sku Standard_LRS``` - to create a new `sitecorelabassets` storage account in the EastUS datacenter
-Note: the storage account name should be globally unique.
-4. Open locally the Microsoft Azure Storage Explorer tool and navigate to your `sitecorelabassets` Storage account
-5. Right click on "Blob Containers" and choose "Create Blob Container" like illustrated below:
+```
+#list your Azure subscriptions
+az account list --output table
+
+#select `Your-Subscription` subscription you would like to use for this lab
+az account set --subscription Your-Subscription
+
+#list all the resource groups you have under the subscription `Your-Subscription`
+az group list --output table
+
+#create a new `Sitecore_Lab-Assets` resource group
+az group create -l eastus -n Sitecore_Lab-Assets
+
+#list all the resources you have under the resource group `Sitecore_Lab-Assets` (should be empty for now)
+az resource list -g Sitecore_Lab-Assets --output table
+
+#create a new `sitecorelabassets<yourname>` storage account in the EastUS datacenter
+#Note: the storage account name `sitecorelabassets<yourname>` should be globally unique. So replace the `<yourname>` by your name.
+az storage account create -n sitecorelabassets<yourname> -g Sitecore_Lab-Assets -l eastus --sku Standard_LRS
+```
+
+4. Open locally the Microsoft Azure Storage Explorer tool and navigate to your `sitecorelabassets<yourname>` Storage account
+5. Right click on "Blob Containers" and choose "Create Blob Container" like illustrated below and create the `sitecoreassets` container:
 
 ![Create Blob Container](./imgs/create%20blob%20container.PNG)
 
-5. Once unzipped locally, upload the two associated files of the Sitecore XM Scaled package zip file (9.0.0 - 171002) in the `sitecore-assets` container
-6. Upload the Sitecore license.xml file as well in the `sitecore-assets` container
+5. Once unzipped locally, upload the two associated files of the Sitecore XM Scaled package zip file (9.0.0 - 171002) in the `sitecoreassets` container
+6. Upload the Sitecore license.xml file as well in the `sitecoreassets` container
+TODO - review here - cd C:\users\ContainerAdministrator\CloudDrive instead
 
-![Sitecore Assets uploaded](./imgs/sitecore%20assets%20uploaded.PNG) 
+![Sitecore Assets uploaded](./imgs/sitecore%20assets%20uploaded.PNG)
 
-## Takeaways
+## Resources
 
-- Not required for this lab, but if you would like to provision an Azure Virtual Machine you could for example use the Azure DevTest Labs
-  - https://docs.microsoft.com/en-us/azure/devtest-lab/devtest-lab-overview
+- [Azure CLI 2.0 Commands](https://docs.microsoft.com/en-us/cli/azure/?view=azure-cli-latest)
+- https://docs.microsoft.com/en-us/azure/storage/common/storage-powershell-guide-full
+- Not required for this lab, but if you would like to provision an Azure Virtual Machine you could for example use the [Azure DevTest Labs](https://docs.microsoft.com/en-us/azure/devtest-lab/devtest-lab-overview)
+
+## What have you seen?
+
+TODO

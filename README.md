@@ -41,7 +41,7 @@ You will need an Azure subscription to be able to run this lab for the Azure ser
 You will need these different assets from Sitecore – if you don’t, please ask your Sitecore partner or rep:
 - License.xml to run Sitecore XM on Azure Web App
 - Sitecore XM Scaled package zip file 9.0.0 containing the CM and CD MSDeploy packages
-- Sitecore Publishing Service 2.0.1
+- Sitecore Publishing Service 2.1.0
 
 Here are the Sitecore concepts you are not going to see with this lab (for now):
 - No pure Sitecore development - it's not a Sitecore lab.
@@ -49,25 +49,6 @@ Here are the Sitecore concepts you are not going to see with this lab (for now):
 - No TDS nor Unicorn
 - No local dev/test - we are using environment in the Cloud mainly by minimizing any local development and manipulation.
 - No Sitecore Azure Toolkit - we are using 
-
-## Backlog of future updates and improvements:
-
-- Update the [Sitecore Publishing Service 2.1](https://dev.sitecore.net/Downloads/Sitecore%20Publishing%20Service/21/Sitecore%20Publishing%20Service%2021%20Initial%20Release/Release%20Notes)
-- Mention the new feature: [Announcing general availability of the new App Service Premium Plan](https://azure.microsoft.com/en-us/blog/announcing-general-availability-of-the-new-app-service-premium-plan/)
-- Mention the new feature: [Introducing the New App Service Support Center (Preview)](https://blogs.msdn.microsoft.com/appserviceteam/2017/09/28/introducing-the-new-app-service-support-center-preview/)
-- Update the repo to Sitecore 9.0.0 - https://dev.sitecore.net/Downloads/Sitecore_Experience_Platform/90/Sitecore_Experience_Platform_90_Initial_Release.aspx + Sitecore Azure Quickstart Templates 2.0 https://github.com/Sitecore/Sitecore-Azure-Quickstart-Templates/releases/tag/2.0
-- Mention theSitecore ARM templates – topologies and tiers page:
-https://kb.sitecore.net/articles/848330
-- Update doc with "Publishing Service: high availability": https://kb.sitecore.net/articles/993639
-- Update IP restriction section
-  - From the Azure portal: https://blogs.msdn.microsoft.com/appserviceteam/2017/09/13/august-2017-app-service-update/
-  - From ARM Templates: https://github.com/shanepeckham/CADLab_Loyalty_Security#ip-restricting-the-app-service-api-app-to-be-callable-only-from-api-management
-- Add a new Azure Search Traffic Analytics + PowerBI
-https://docs.microsoft.com/en-us/azure/search/search-traffic-analytics
-- Add TDS or Unicorn to manage the Sitecore content
-- Update the CI/CD sections with VSTS to have a complete DevOps pipeline
-- Add a new section to implement a Sitecore button to populate the Alt Text of an image via the Azure Cognitive Services
-- etc.
 
 ## Contributions to this repository
 
