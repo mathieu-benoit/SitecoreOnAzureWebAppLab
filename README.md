@@ -34,9 +34,9 @@
 
 ## Introduction
 
-This hands-on lab is a step-by-step lab which allows to target different roles (dev, ops, etc.) with different levels of expertise with Sitecore or Microsoft Azure. By provisioning the necessary Azure services needed you will be able to play with the key features of them on Azure.
+This hands-on lab is a step-by-step lab which allows to target different roles (dev, ops, etc.) with different levels of expertise with Sitecore or Microsoft Azure. By provisioning the necessary Azure services needed you will be able to play with the key features of them on Azure. Let's say it's not a Sitecore training, it's more a Microsoft Azure training.
 
-You will need an Azure subscription to be able to run this lab for the Azure services provisioning.
+You will need an Azure subscription to be able to run this lab for the Azure services provisioned.
 
 You will need these different assets from Sitecore – if you don’t, please ask your Sitecore partner or rep:
 - License.xml to run Sitecore XM on Azure Web App
@@ -44,11 +44,11 @@ You will need these different assets from Sitecore – if you don’t, please as
 - Sitecore Publishing Service 2.1.0
 
 Here are the Sitecore concepts you are not going to see with this lab (for now):
-- No pure Sitecore development - it's not a Sitecore lab.
+- No pure Sitecore development - it's not a Sitecore lab/training.
 - No MongoDB - we are leveraging the XM configuration without xDB.
-- No TDS nor Unicorn
+- No TDS nor Unicorn.
 - No local dev/test - we are using environment in the Cloud mainly by minimizing any local development and manipulation.
-- No Sitecore Azure Toolkit - we are using 
+- No Sitecore Azure Toolkit - we are using simple PowerShell with the official ARM Templates.
 
 ## Contributions to this repository
 
