@@ -56,15 +56,59 @@ C:\users\ContainerAdministrator\CloudDrive\DeployDefaultARMTemplates.ps1 -Licens
 
 ![Azure resources created](./imgs/azure%20resources%20created.PNG)
 
-## Task 2: Read and interpret the PowerShell script and the Sitecore ARM Template (10 min)
+## Task 2: Read and interpret the PowerShell script and the Sitecore ARM Template (15 min)
 
-1. You could open the [DeployDefaultARMTemplates.ps1](../1 - Setup/DeployDefaultARMTemplates.ps1) script and see/learn what is in here.
+In this section, the attendee will learn more about the PowerShell and ARM Templates used in the previous task.
+Remark: before moving forward with this task, make sure your deployment started properly, let's check the first lines on the Azure Cloud Shell console.
 
-2. You could open the [Sitecore XM Environment](https://github.com/Sitecore/Sitecore-Azure-Quickstart-Templates/tree/master/Sitecore%209.0.0/XM) we deployed with this script.
+1. You could open the [DeployDefaultARMTemplates.ps1](../1 - Setup/DeployDefaultARMTemplates.ps1) script and see/learn what is in here. Here are the main points you should see:
+  - The `Param` section is where all the parameters are defined. Some of them are pre-initialized but could be overriden, others are mandatory when invoking this script.
+  - Then you will find different variables initialized like `CdMsDeployPackageUrl`, `CmMsDeployPackageUrl`, `licenseFileContent`, etc.
+  - Finnaly you will find the PowerShell command to deploy an ARM Templates with `New-AzureRmResourceGroupDeployment`.
+
+2. You could open the [Sitecore XM Environment](https://github.com/Sitecore/Sitecore-Azure-Quickstart-Templates/tree/master/Sitecore%209.0.0/XM) we deployed with this script and see/learn what is in here. Don't forget the nested templates. Here are the main points you should see:
+  - The first file to look at is the entry point of the ARM Template deployment: `azuredeploy.json`. In this file, like any ARM Template, you will find 3 main areas: `variables`, `parameters` (you could override the default values here by passing new value when invoking the ARM Template and `resources`. In the latest, you will 3 resources deployed which are called "nested deployments": `infrastructure`, `application` and `module`.
+  - The second file to look at is `nested/infrastructure.json` which will take care of the definition of all the Azure services to deploy: App Service Plan, Web Apps, Azure SQL Server, Azure SQL Database, Application Insights, etc.
+  - The third file to look at is `nested/application.json` which will take care of the definition of the 2 WebDeploy on the 2 respective Azure Web App (CM and CD).
 
 ## Task 3: Configure an Azure KeyVault to store secrets (10 min)
 
-See corresponding section in the step-by-step document [here](../Sitecore%20on%20Azure%20PaaS%20services%20-%20Hands-on%20Lab.pdf).
+Remark: before starting this part, you should check what is the status of your deployment.
+
+In this section, the attendee will create an Azure KeyVault and will store some secrets into it by using the Azure Cloud Shell Bash within the Azure portal, then we will modify the ARM Template with some custom updates.
+
+1. Go to the Azure portal [https://portal.azure.com](https://portal.azure.com)
+2. Open the Azure Cloud Shell for Bash (quickstart available [here](https://docs.microsoft.com/en-us/azure/cloud-shell/quickstart))
+  - Important note: when doing that, you will close the current PowerShell session but the ARM Template deployment currently running, if not finished yet, will continue.
+3. In this console type these successive commands:
+
+```
+#list your Azure subscriptions
+az account list --output table
+
+#select `Your-Subscription` subscription you would like to use for this lab
+az account set --subscription Your-Subscription
+
+#list all the resource groups you have under the subscription `Your-Subscription`
+az group list --output table
+
+#create a new `Sitecore_Lab-KeyVault` resource group
+az group create -l eastus -n Sitecore_Lab-KeyVault
+
+#create a `sitecorelabkeyvault` Azure KeyVault account within the `Sitecore_Lab-KeyVault` resource group 
+az keyvault create --name "sitecorelabkeyvault" --resource-group "Sitecore_Lab-KeyVault" --location "East US" --enabled-for-template-deployment true
+
+#store 2 secrets into this KeyVault just created: `SqlServerLogin` and `SqlServerPassword`.
+az keyvault secret set --vault-name "sitecorelabkeyvault" --name "SqlServerLogin" --value "demouser"
+az keyvault secret set --vault-name "sitecorelabkeyvault" --name "SqlServerPassword" --value "demo@pass12345"
+```
+
+4. So now the Azure KeyVault `sitecorelabkeyvault` has 2 secrets we will use in the following task below, you could check that by opening the associated Azure KeyVault's "Secrets" blade:
+
+![Azure KeyVault Secrets Deployed](./imgs/keyvault%20secrets%20deployed.png)
+
+Note: We will use these 2 secrets with the next task with the deployment of a custom ARM Templates.
+Furthermore, we just stored 2 secrets for this current lab, but you should store more: other SQL databases passwords and login, Sitecore Admin password, etc. per environment for example: DEV, QA, PROD, etc.
 
 ## Task 4: Deploy a custom Sitecore XM ARM Templates (15 min)
 

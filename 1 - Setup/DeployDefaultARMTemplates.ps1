@@ -6,6 +6,7 @@ Param(
   [string] $ResourceGroupLocation = "East US",
   [string] $TemplateFile = "https://raw.githubusercontent.com/Sitecore/Sitecore-Azure-Quickstart-Templates/master/Sitecore%209.0.0/XM/azuredeploy.json",
   [string] [Parameter(Mandatory=$true)] $AssetsBlobStorageAccountName,
+  [string] $AssetsBlobStorageContainerName = "sitecoreassets",
   [string] $SqlServerLogin = "demouser",
   [string] $SitecoreSku = "Large",
   [string] [Parameter(Mandatory=$true)] $LicenseFile,
@@ -13,8 +14,8 @@ Param(
   [securestring] $SitecoreAdminPassword = $SqlServerPassword
 )
 
-$CdMsDeployPackageUrl = "https://" + $AssetsBlobStorageAccountName  + ".blob.core.windows.net/sitecoreassets/Sitecore%209.0.0%20rev.%20171002%20(Cloud)_cd.scwdp.zip";
-$CmMsDeployPackageUrl = "https://" + $AssetsBlobStorageAccountName  + ".blob.core.windows.net/sitecoreassets/Sitecore%209.0.0%20rev.%20171002%20(Cloud)_cm.scwdp.zip";
+$CdMsDeployPackageUrl = "https://" + $AssetsBlobStorageAccountName  + ".blob.core.windows.net/" + $AssetsBlobStorageContainerName  + "/Sitecore%209.0.0%20rev.%20171002%20(Cloud)_cd.scwdp.zip";
+$CmMsDeployPackageUrl = "https://" + $AssetsBlobStorageAccountName  + ".blob.core.windows.net/" + $AssetsBlobStorageContainerName  + "/Sitecore%209.0.0%20rev.%20171002%20(Cloud)_cm.scwdp.zip";
 
 $licenseFileContent = Get-Content -Raw -Encoding UTF8 -Path $LicenseFile | Out-String;
 

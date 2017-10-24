@@ -16,8 +16,8 @@
 
 - October 2017
   - (In progress) Migrate this lab from Word document to this GitHub repository
-  - Replace Azure VM provisioning through the Azure DevTest Labs service by using the Azure Cloud Shell
-  - Add the new Overview section
+  - Replace Azure VM provisioning through the Azure DevTest Labs service by using the Azure Cloud Shell instead
+  - Add the new Overview section with cost estimation, etc.
   - Update references to Sitecore 9.0.0 (rev. 171002) – ARM Templates, etc.
   - Update references to Sitecore Publishing Service 2.1.0
 - June 2017
@@ -48,7 +48,7 @@ Here are the Sitecore concepts you are not going to see with this lab (for now):
 - No MongoDB - we are leveraging the XM configuration without xDB.
 - No TDS nor Unicorn.
 - No local dev/test - we are using environment in the Cloud mainly by minimizing any local development and manipulation.
-- No Sitecore Azure Toolkit - we are using simple PowerShell with the official ARM Templates.
+- No Sitecore Install Framework nor Sitecore Azure Toolkit - we are using simple PowerShell with the official ARM Templates.
 
 ## Contributions to this repository
 
