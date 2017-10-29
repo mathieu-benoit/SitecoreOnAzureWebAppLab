@@ -68,10 +68,11 @@ The estimations below of the Azure services cost are here as an exercise for you
 
 - [Microsoft Azure, Cloud and Enterprise Symbol / Icon Set](https://www.microsoft.com/download/details.aspx?id=41937)
 - [Azure enterprise scaffold - prescriptive subscription governance](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-manager-subscription-governance)
-- [Sitecore ARM templates – topologies and tiers](https://kb.sitecore.net/articles/848330)
+- [Sitecore XP 9.0 ARM templates – topologies and tiers](https://kb.sitecore.net/articles/043375)
 - [Azure data center compatibility table](https://kb.sitecore.net/articles/617478)
 - [Sitecore Cloud - Status Page](https://status.cloud.sitecore.net/)
 - [Sitecore on Microsoft Azure – Module compatibility](https://kb.sitecore.net/articles/201557)
+- 
 
 ## What have you seen?
 

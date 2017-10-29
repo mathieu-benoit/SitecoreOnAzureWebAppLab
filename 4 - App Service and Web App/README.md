@@ -11,3 +11,7 @@ See corresponding section in the step-by-step document [here](../Sitecore%20on%2
 - Update IP restriction section
   - From the Azure portal: https://blogs.msdn.microsoft.com/appserviceteam/2017/09/13/august-2017-app-service-update/
   - From ARM Templates: https://github.com/shanepeckham/CADLab_Loyalty_Security#ip-restricting-the-app-service-api-app-to-be-callable-only-from-api-management
+
+# Resources
+
+- [Advanced troubleshooting for Sitecore XP on Azure Web Apps](https://kb.sitecore.net/articles/111669)

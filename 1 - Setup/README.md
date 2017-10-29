@@ -80,6 +80,7 @@ az storage account create -n sitecorelabassets<yourname> -g Sitecore_Lab-Assets 
 - [Azure CLI 2.0 Commands](https://docs.microsoft.com/en-us/cli/azure/?view=azure-cli-latest)
 - https://docs.microsoft.com/en-us/azure/storage/common/storage-powershell-guide-full
 - Not required for this lab, but if you would like to provision an Azure Virtual Machine you could for example use the [Azure DevTest Labs](https://docs.microsoft.com/en-us/azure/devtest-lab/devtest-lab-overview)
+- [Azure enterprise scaffold - prescriptive subscription governance](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-manager-subscription-governance)
 
 ## What have you seen?
 
